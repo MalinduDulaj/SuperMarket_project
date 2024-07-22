@@ -29,6 +29,20 @@ public class Customer {
     public void setSalary(Double salary) {
         this.salary = salary;
     }
+
+
+    public Customer(int customerID, String customerName, String address, Double salary) {
+        this.customerID = customerID;
+        this.customerName = customerName;
+        Address = address;
+        this.salary = salary;
+    }
+    
+
+
+    public Customer() {
+    }
+    
     @Override
     public String toString() {
         return "Customer [customerID=" + customerID + ", customerName=" + customerName + ", Address=" + Address

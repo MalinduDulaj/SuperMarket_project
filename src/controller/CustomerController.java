@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import model.Customer;
 
 public class CustomerController {
         @FXML
@@ -34,6 +35,8 @@ public class CustomerController {
         System.out.println("Name: "+name);
         System.out.println("Address: " + address);
         System.out.println("Salary: " + salary);
+
+        Customer customer = new Customer(id,name,address, salary);
 
 
     }
