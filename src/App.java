@@ -18,7 +18,7 @@ public class App extends Application{
         Parent root = FXMLLoader.load(resource);//load the resourse
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        primaryStage.setTitle("This is JAVAFX of cmjd-107");
+        primaryStage.setTitle("Java fx Cmjd-107");
 
     }
 }

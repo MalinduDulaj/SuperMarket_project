@@ -14,7 +14,7 @@ public class MainController {
     private AnchorPane root;
 
     @FXML
-    void btnCustomerOnAction(ActionEvent event) throws IOException {
+    boid btnCustomerOnAction(ActionEvent event) throws IOException {
         System.out.println("Customer Button Clicked");
 
         //URL resource = this.getClass().getResource("/view/Customer.fxml");
