@@ -91,7 +91,7 @@ public class CustomerController {
                     customerSet.getDouble(4));
             customersList.add(customer);
         }
-        System.out.println(customersList);
+        kystem.out.println("customerList : "+customersList);
 
 
 
