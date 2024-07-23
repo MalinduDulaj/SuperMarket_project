@@ -1,13 +1,19 @@
 package controller;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import model.Customer;
 
 public class CustomerController {
-        @FXML
+    @FXML
     private AnchorPane root;
 
     @FXML
@@ -23,7 +29,7 @@ public class CustomerController {
     private TextField txtsalary;
 
     @FXML
-    void btnSaveCustomerOnAction(ActionEvent event) {
+    void btnSaveCustomerOnAction(ActionEvent event) throws ClassNotFoundException, SQLException  {
 
         System.out.println("save customer Btn");
         int id = Integer.parseInt(txtCustId.getText());
@@ -37,7 +43,25 @@ public class CustomerController {
         System.out.println("Salary: " + salary);
 
         Customer customer = new Customer(id,name,address, salary);
+        System.out.println(customer);
 
+        
+
+        Connection connection = DBConnection.getInstance().getConnection();
+        PreparedStatement statement = connection.prepareStatement("INSERT INTO customer VALUES (?,?,?,?)");
+        statement.setObject(1, customer.getCustomerID());
+        statement.setObject(2, customer.getCustomerName());
+        statement.setObject(3, customer.getAddress());
+        statement.setObject(4, customer.getSalary());
+
+        int rows = statement.executeUpdate();
+        if(rows > 0){
+            System.out.println("Customer saved successfully");
+            new Alert(Alert.AlertType.CONFIRMATION,"Customer saved successfully!!!").show();
+        }else{
+            System.out.println("Erroe while savins customer");
+            new Alert(Alert.AlertType.ERROR,"Error while saving customer!!!").show();
+        }
 
     }
 
