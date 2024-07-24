@@ -21,13 +21,13 @@
       <TextField fx:id="txtAddress" layoutX="18.0" layoutY="181.0" prefHeight="37.0" prefWidth="207.0" promptText="Address" style="-fx-background-color: #bdc3c7;" />
       <TextField fx:id="txtsalary" layoutX="18.0" layoutY="228.0" prefHeight="37.0" prefWidth="207.0" promptText="Salary" style="-fx-background-color: #bdc3c7;" />
       <Button layoutX="75.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnSaveCustomerOnAction" prefHeight="44.0" prefWidth="173.0" style="-fx-background-color: #3498db;" text="Save Customer" />
-      <TableView layoutX="278.0" layoutY="79.0" prefHeight="236.0" prefWidth="375.0" style="-fx-background-color: #95a5a6;">
+      <TableView fx:id="tblCustomer" layoutX="278.0" layoutY="79.0" prefHeight="236.0" prefWidth="375.0" style="-fx-background-color: #95a5a6;">
         <columns>
-          <TableColumn prefWidth="47.0" text="ID" />
-          <TableColumn prefWidth="67.0" text="Name" />
-            <TableColumn prefWidth="109.0" text="Address" />
-            <TableColumn prefWidth="77.0" text="Salary" />
-            <TableColumn prefWidth="75.0" text="Action" />
+          <TableColumn fx:id="colID" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="67.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="109.0" text="Address" />
+            <TableColumn fx:id="colsalary" prefWidth="77.0" text="Salary" />
+            <TableColumn fx:id="colAction" prefWidth="75.0" text="Action" />
         </columns>
       </TableView>
       <JFXButton layoutX="482.0" layoutY="346.0" onAction="#btnLoadAllCustomerOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #2ecc71;" text="Load All Customer" textFill="#b91515" />

@@ -15,14 +15,17 @@ public class MainController {
 
     @FXML
     void btnCustomerOnAction(ActionEvent event) throws IOException {
-        System.out.println("Customer Button Clicked");
 
-        //URL resource = this.getClass().getResource("/view/Customer.fxml");
-        //Parent root = FXMLLoader.load(resource);
-        //Parent root = FXMLLoader.load(this.getClass().getResource("/view/Customer.fxml"));
-        //Stage stage = new Stage();
-        //stage.setScene(new Scene(root));
-        //stage.setTitle("Customer From");
+            System.out.println("Customer Button Clicked");
+
+        
+            // URL resource = this.getClass().getResource("/view/Customer.fxml");
+            // Parent node = FXMLLoader.load(resource);
+            // Stage stage = new Stage();
+            // stage.setScene(new Scene(node));
+            // stage.show();
+            // stage.setTitle("Customer Form");
+        
 
         //Load to existing stage
         this.root.getChildren().clear();
