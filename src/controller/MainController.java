@@ -37,8 +37,14 @@ public class MainController {
     }
 
     @FXML
-    void btnItemOnAction(ActionEvent event) {
+    void btnItemOnAction(ActionEvent event) throws IOException {
+        
         System.out.println("Item Button Clicked");
+
+        //Load to existin stage
+        this.root.getChildren().clear();
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/Item.fxml"));
+        this.root.getChildren().add(node);
 
     }
 
