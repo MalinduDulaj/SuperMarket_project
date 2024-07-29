@@ -2,18 +2,25 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="783.0" style="-fx-background-color: 2E236C;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="822.0" prefWidth="773.0" style="-fx-background-color: 2E236C;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Label layoutX="166.0" layoutY="55.0" prefHeight="28.0" prefWidth="318.0" style="-fx-background-color: #e74c3c;" text="SuperMarket">
+      <Label layoutX="207.0" layoutY="14.0" prefHeight="28.0" prefWidth="318.0" style="-fx-background-color: #e74c3c;" text="SuperMarket">
          <font>
             <Font size="55.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="189.0" onAction="#btnCustomerOnAction" prefHeight="67.0" prefWidth="163.0" style="-fx-background-color: #3498db;" text="Customer" />
-      <JFXButton layoutX="244.0" layoutY="189.0" onAction="#btnItemOnAction" prefHeight="67.0" prefWidth="163.0" style="-fx-background-color: #1abc9c;" text="Item" />
-      <JFXButton layoutX="440.0" layoutY="189.0" onAction="#btnOrderOnAction" prefHeight="67.0" prefWidth="152.0" style="-fx-background-color: #7f8c8d;" text="Orders" />
+      <JFXButton buttonType="RAISED" layoutX="44.0" layoutY="174.0" onAction="#btnCustomerOnAction" prefHeight="67.0" prefWidth="163.0" style="-fx-background-color: #3498db;" text="Customer" />
+      <JFXButton layoutX="305.0" layoutY="174.0" onAction="#btnItemOnAction" prefHeight="67.0" prefWidth="163.0" style="-fx-background-color: #1abc9c;" text="Item" />
+      <JFXButton layoutX="540.0" layoutY="174.0" onAction="#btnOrderOnAction" prefHeight="67.0" prefWidth="152.0" style="-fx-background-color: #7f8c8d;" text="Orders" />
+      <ImageView fitHeight="514.0" fitWidth="951.0" layoutX="2.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../supermarket.jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
