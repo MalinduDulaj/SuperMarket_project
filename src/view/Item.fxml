@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" layoutX="6.0" layoutY="7.0" prefHeight="63.0" prefWidth="722.0" text="Item From" textFill="#bc1313">
          <font>
@@ -20,15 +20,15 @@
       <TextField fx:id="txtPackSize" layoutX="59.0" layoutY="173.0" prefHeight="26.0" prefWidth="193.0" promptText="Pack Size" />
       <TextField fx:id="txtUnitPrice" layoutX="457.0" layoutY="84.0" prefHeight="26.0" prefWidth="193.0" promptText="Unit Price" />
       <TextField fx:id="txtQOH" layoutX="457.0" layoutY="130.0" prefHeight="26.0" prefWidth="193.0" promptText="Quantaty on hand" />
-      <JFXButton layoutX="319.0" layoutY="193.0" onAction="#btnUpdateItem" prefHeight="39.0" prefWidth="97.0" text="Update" textFill="#0e7a86">
+      <JFXButton layoutX="319.0" layoutY="193.0" onAction="#btnUpdateItem" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: #b2bec3;" text="Update" textFill="#0e7a86">
          <font>
             <Font size="20.0" />
          </font></JFXButton>
-      <JFXButton layoutX="457.0" layoutY="193.0" onAction="#btnSaveItemOnAction" prefHeight="26.0" prefWidth="85.0" text="Save" textFill="#bfc40e">
+      <JFXButton layoutX="457.0" layoutY="193.0" onAction="#btnSaveItemOnAction" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #81ecec;" text="Save" textFill="#bfc40e">
          <font>
             <Font size="20.0" />
          </font></JFXButton>
-      <JFXButton layoutX="586.0" layoutY="193.0" onAction="#btnDeleteItemOnAction" prefHeight="26.0" prefWidth="85.0" text="Delete" textFill="#7c4f6d">
+      <JFXButton layoutX="586.0" layoutY="193.0" onAction="#btnDeleteItemOnAction" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #b2bec3;" text="Delete" textFill="#7c4f6d">
          <font>
             <Font size="20.0" />
          </font></JFXButton>
@@ -41,7 +41,7 @@
             <TableColumn fx:id="colqoh" prefWidth="126.0" text="Quanty On hand" />
         </columns>
       </TableView>
-      <JFXButton layoutX="517.0" layoutY="519.0" onAction="#btnPlaceorderOnAction" prefHeight="39.0" prefWidth="137.0" text="Place  Order" textFill="#24cd2c">
+      <JFXButton layoutX="610.0" layoutY="494.0" onAction="#btnPlaceorderOnAction" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #81ecec;" text="Place  Order" textFill="#24cd2c">
          <font>
             <Font size="20.0" />
          </font>

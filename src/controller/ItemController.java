@@ -2,7 +2,9 @@ package controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import db.DBConnection;
 import javafx.event.ActionEvent;
@@ -11,8 +13,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import model.Item;
+import tm.ItemTM;
 
 public class ItemController {
     
@@ -35,32 +39,61 @@ public class ItemController {
     private TextField txtUnitPrice;
 
     @FXML
-    private TableColumn<?, ?> colCode;
+    private TableColumn<ItemTM, Integer> colCode;
 
     @FXML
-    private TableColumn<?, ?> colDescription;
+    private TableColumn<ItemTM,String> colDescription;
 
     @FXML
-    private TableColumn<?, ?> colPacksize;
+    private TableColumn<ItemTM,String> colPacksize;
 
     @FXML
-    private TableColumn<?, ?> colUnitprice;
+    private TableColumn<ItemTM, Double> colUnitprice;
 
     @FXML
-    private TableColumn<?, ?> colqoh;
+    private TableColumn<ItemTM,Integer> colqoh;
 
 
     @FXML
     private TableView<?> tblItem;
 
-    public void getAllItem() throws ClassNotFoundException,SQLException{
+    public void initialize() throws ClassNotFoundException, SQLException {
+        colCode.setCellValueFactory(new PropertyValueFactory<>("Code"));
+        colDescription.setCellValueFactory(new PropertyValueFactory<>("Description"));
+        colPacksize.setCellValueFactory(new PropertyValueFactory<>("Pack_Size"));
+        colUnitprice.setCellValueFactory(new PropertyValueFactory<>("Unit_Price"));
+        colqoh.setCellValueFactory(new PropertyValueFactory<>("Quantaty_on_hand"));
+        
+        getAllItem();
 
-        ///////////////////////////////
+    }
+
+
+
+    public void getAllItem() throws ClassNotFoundException,SQLException{
+        PreparedStatement statement = DBConnection.getInstance().getConnection()
+                .prepareStatement("SELECT * FROM  Items");
+        ResultSet cusomterSet = statement.executeQuery();
+
+        ArrayList<Item> itemList = new ArrayList<Item>();
+
+        while (cusomterSet.next()) {
+            Item item = new Item(cusomterSet.getInt("Code"),
+              cusomterSet.getString("Description"),
+              cusomterSet.getString("Pack_Size"), 
+              cusomterSet.getDouble("Unit_Price"), 
+              cusomterSet.getInt("Quantaty_on_hand"));
+
+            System.out.println(item); 
+            itemList.add(item);
+        }
+
     }
 
 
     @FXML
     void btnDeleteItemOnAction(ActionEvent event) {
+        System.out.println("Delete Button Clicked");
 
     }
 
@@ -81,6 +114,7 @@ public class ItemController {
 
         Item item = new Item(code,description,pack_Size,unit_Price,quantaty_on_hand);
         System.out.println(item);
+
 
         Connection connection = DBConnection.getInstance().getConnection();
 
@@ -105,11 +139,13 @@ public class ItemController {
 
     @FXML
     void btnUpdateItem(ActionEvent event) {
+        System.out.println("Update Button Clicked");
 
     }
 
     @FXML
     void btnPlaceorderOnAction(ActionEvent event) throws ClassNotFoundException,SQLException {
+
       getAllItem();
     }
 

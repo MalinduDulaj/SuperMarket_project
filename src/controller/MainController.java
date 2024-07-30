@@ -38,7 +38,7 @@ public class MainController {
 
     @FXML
     void btnItemOnAction(ActionEvent event) throws IOException {
-        
+
         System.out.println("Item Button Clicked");
 
         //Load to existin stage
@@ -46,11 +46,17 @@ public class MainController {
         Parent node = FXMLLoader.load(this.getClass().getResource("/view/Item.fxml"));
         this.root.getChildren().add(node);
 
+
     }
 
     @FXML
-    void btnOrderOnAction(ActionEvent event) {
+    void btnOrderOnAction(ActionEvent event) throws IOException {
+
         System.out.println("Order Button Clicked");
+
+        this.root.getChildren().clear();
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/Order.fxml"));
+        this.root.getChildren().add(node);
 
     }
 
