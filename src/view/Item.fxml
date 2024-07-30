@@ -32,7 +32,7 @@
          <font>
             <Font size="20.0" />
          </font></JFXButton>
-      <TableView fx:id="tblItem" layoutX="59.0" layoutY="239.0" prefHeight="255.0" prefWidth="633.0">
+      <TableView fx:id="tblItem" layoutX="59.0" layoutY="239.0" prefHeight="255.0" prefWidth="633.0" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="239.0">
         <columns>
           <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
           <TableColumn fx:id="colDescription" prefWidth="190.0" text="Description" />

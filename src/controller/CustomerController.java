@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,6 +12,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -150,6 +153,17 @@ public class CustomerController {
     @FXML
     void btnLoadAllCustomerOnAction(ActionEvent event) throws ClassNotFoundException, SQLException {
         getAllCustomer();
+    }
+
+    @FXML
+    void btnBackOnActionMain(ActionEvent event) throws IOException {
+        System.out.println("Bact to main Button Clicked");
+
+        //Load to existin stage
+        this.root.getChildren().clear();
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/Main.fxml"));
+        this.root.getChildren().add(node);
+
     }
 
 }
