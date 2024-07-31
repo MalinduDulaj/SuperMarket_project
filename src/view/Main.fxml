@@ -19,7 +19,7 @@
       <JFXButton layoutX="540.0" layoutY="174.0" onAction="#btnOrderOnAction" prefHeight="67.0" prefWidth="152.0" style="-fx-background-color: #7f8c8d;" text="Orders" />
       <ImageView fitHeight="514.0" fitWidth="951.0" layoutX="2.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../supermarket.jpeg" />
+            <Image url="@../../image/supermarket.jpeg" />
          </image>
       </ImageView>
    </children>

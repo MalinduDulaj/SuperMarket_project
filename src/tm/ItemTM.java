@@ -1,15 +1,15 @@
 package tm;
 
 public class ItemTM {
-    private int Code;
+    private String Code;
     private String Description;
     private String Pack_Size;
     private Double Unit_Price;
     private int Quantaty_on_hand;
-    public int getCode() {
+    public String getCode() {
         return Code;
     }
-    public void setCode(int code) {
+    public void setCode(String code) {
         Code = code;
     }
     public String getDescription() {
@@ -41,6 +41,13 @@ public class ItemTM {
 
 
 
+    public ItemTM(String code, String description, String pack_Size, Double unit_Price, int quantaty_on_hand) {
+        Code = code;
+        Description = description;
+        Pack_Size = pack_Size;
+        Unit_Price = unit_Price;
+        Quantaty_on_hand = quantaty_on_hand;
+    }
     public ItemTM() {
     }
 

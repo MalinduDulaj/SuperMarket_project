@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="804.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="839.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerController">
    <children>
-      <Label alignment="CENTER" layoutX="203.0" prefHeight="66.0" prefWidth="228.0" style="-fx-border-color: #9b59b6;" text="Customer" AnchorPane.bottomAnchor="738.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="421.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutX="250.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="636.0" style="-fx-background-color: #fd79a8;" text="Customer" AnchorPane.bottomAnchor="775.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="424.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="51.0" />
          </font>
@@ -33,9 +33,9 @@
         </columns>
       </TableView>
       <JFXButton layoutX="576.0" layoutY="324.0" onAction="#btnLoadAllCustomerOnAction" prefHeight="26.0" prefWidth="138.0" style="-fx-background-color: #2ecc71;" text="Load All Customer" textFill="#b91515" />
-      <ImageView fitHeight="414.0" fitWidth="744.0" layoutX="137.0" layoutY="376.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="414.0" fitWidth="1000.0" layoutX="211.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../customer_supermarket.jpeg" />
+            <Image url="@../../image/customer_supermarket.jpeg" />
          </image>
       </ImageView>
       <JFXButton layoutX="21.0" layoutY="733.0" onAction="#btnBackOnActionMain" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: #6a89cc;" text="Back" />

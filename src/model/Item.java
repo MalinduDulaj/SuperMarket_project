@@ -2,15 +2,15 @@ package model;
 
 public class Item {
     
-    private int Code;
+    private String Code;
     private String Description;
     private String Pack_Size;
     private Double Unit_Price;
     private int Quantaty_on_hand;
-    public int getCode() {
+    public String getCode() {
         return Code;
     }
-    public void setCode(int code) {
+    public void setCode(String code) {
         Code = code;
     }
     public String getDescription() {
@@ -29,7 +29,7 @@ public class Item {
         return Unit_Price;
     }
     public void setUnit_Price(Double unit_Price) {
-        Unit_Price = unit_Price;
+        this.Unit_Price = unit_Price;
     }
     public int getQuantaty_on_hand() {
         return Quantaty_on_hand;
@@ -37,12 +37,12 @@ public class Item {
     public void setQuantaty_on_hand(int quantaty_on_hand) {
         Quantaty_on_hand = quantaty_on_hand;
     }
-    public Item(int code, String description, String pack_Size, Double unit_Price, int quantaty_on_hand) {
-        Code = code;
-        Description = description;
-        Pack_Size = pack_Size;
-        Unit_Price = unit_Price;
-        Quantaty_on_hand = quantaty_on_hand;
+    public Item(String code, String description, String pack_Size, Double unit_Price, int quantaty_on_hand) {
+        this.Code = code;
+        this.Description = description;
+        this.Pack_Size = pack_Size;
+        this.Unit_Price = unit_Price;
+        this.Quantaty_on_hand = quantaty_on_hand;
     }
     public Item() {
     }

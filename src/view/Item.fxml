@@ -5,10 +5,12 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemController">
    <children>
       <Label alignment="CENTER" layoutX="6.0" layoutY="7.0" prefHeight="63.0" prefWidth="722.0" text="Item From" textFill="#bc1313">
          <font>
@@ -32,7 +34,7 @@
          <font>
             <Font size="20.0" />
          </font></JFXButton>
-      <TableView fx:id="tblItem" layoutX="59.0" layoutY="239.0" prefHeight="255.0" prefWidth="633.0" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="239.0">
+      <TableView fx:id="tblItem" layoutX="66.0" layoutY="242.0" prefHeight="200.0" prefWidth="633.0" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="66.0" AnchorPane.topAnchor="242.0">
         <columns>
           <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
           <TableColumn fx:id="colDescription" prefWidth="190.0" text="Description" />
@@ -41,10 +43,16 @@
             <TableColumn fx:id="colqoh" prefWidth="126.0" text="Quanty On hand" />
         </columns>
       </TableView>
-      <JFXButton layoutX="610.0" layoutY="494.0" onAction="#btnPlaceorderOnAction" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #81ecec;" text="Place  Order" textFill="#24cd2c">
+      <JFXButton layoutX="617.0" layoutY="442.0" onAction="#btnPlaceorderOnAction" prefHeight="39.0" prefWidth="137.0" style="-fx-background-color: #0984e3;" text="Place  Order" textFill="#24cd2c" AnchorPane.bottomAnchor="244.0" AnchorPane.leftAnchor="617.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="442.0">
          <font>
             <Font size="20.0" />
          </font>
       </JFXButton>
+      <ImageView fitHeight="243.0" fitWidth="362.0" layoutX="216.0" layoutY="481.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/item.jpeg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="39.0" layoutY="641.0" onAction="#btnItemBackOnAction" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #55efc4;" text="Back" />
    </children>
 </AnchorPane>

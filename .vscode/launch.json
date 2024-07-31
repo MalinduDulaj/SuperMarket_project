@@ -4,11 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
-
-
-
+        
         {
             "type": "java",
             "name": "Current File",
@@ -20,8 +16,8 @@
             "name": "App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "cmjd107-javafx_a2a348ca",
-            "vmArgs": "--module-path \"/Users/malindudulaj/Desktop/IJSE/javafx-sdk-17.0-2.11/lib\" --add-modules javafx.controls,javafx.fxml",
+            "projectName": "Small_SuperMarket_b5c65842",
+            "vmArgs": "--module-path \"/Users/malindudulaj/Desktop/IJSE/javafx-sdk-17.0-2.11/lib\" --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
