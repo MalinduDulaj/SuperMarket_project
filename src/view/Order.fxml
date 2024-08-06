@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="order.OrderController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="881.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/images.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="397.0" prefHeight="48.0" prefWidth="122.0" style="-fx-background-color: black;" text="Orders" textFill="#d01c1c">
+         <font>
+            <Font size="39.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="35.0" layoutY="529.0" onAction="#btnBackOrderOnAction" style="-fx-background-color: white;" text="Back" textFill="#eb2626">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtorderid" layoutX="35.0" layoutY="78.0" promptText="Order_ID" />
+      <TextField fx:id="txtorderdata" layoutX="35.0" layoutY="120.0" promptText="Order_Data" />
+      <TextField fx:id="txtcustid" layoutX="35.0" layoutY="170.0" promptText="Cust_ID" />
+   </children>
+</AnchorPane>

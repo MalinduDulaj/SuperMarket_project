@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import db.DBConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,24 +76,50 @@ public class ItemController {
 
 
     public void getAllItem() throws ClassNotFoundException,SQLException{
-        PreparedStatement statement = DBConnection.getInstance().getConnection()
+        
+            PreparedStatement statement = DBConnection.getInstance().getConnection()
                 .prepareStatement("SELECT * FROM  Items");
-        ResultSet cusomterSet = statement.executeQuery();
+        ResultSet itemSet = statement.executeQuery();
 
         ArrayList<Item> itemList = new ArrayList<Item>();
 
-        while (cusomterSet.next()) {
-            Item item = new Item(cusomterSet.getString("Code"),
-              cusomterSet.getString("Description"),
-              cusomterSet.getString("Pack_Size"), 
-              cusomterSet.getDouble("Unit_Price"), 
-              cusomterSet.getInt("Quantaty_on_hand"));
+        while (itemSet.next()) {
+            Item item = new Item(itemSet.getString("Code"),
+              itemSet.getString("Description"),
+              itemSet.getString("Pack_Size"), 
+              itemSet.getDouble("Unit_Price"), 
+              itemSet.getInt("Quantaty_on_hand"));
 
             System.out.println(item); 
             itemList.add(item);
         }
 
-    }
+        System.out.println("ItemList :"+itemList);
+
+        /////////////////////////////////////////////////////////////////
+
+        ObservableList<ItemTM>itemTMList = FXCollections.observableArrayList();
+
+        for (Item item : itemList) {
+            ItemTM itemTM = new ItemTM(
+                    item.getCode(),
+                    item.getDescription(),
+                    item.getPack_Size(),
+                    item.getUnit_Price(),
+                    item.getQuantaty_on_hand());
+
+            itemTMList.add(itemTM);
+        }
+        System.out.println(itemTMList);
+
+        tblItem.setItems((ObservableList<?>) itemTMList);
+
+        
+        }
+        
+    
+
+    
 
 
     @FXML

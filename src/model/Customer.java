@@ -24,7 +24,7 @@ public class Customer {
         this.customerName = customerName;
     }
     public void setAddress(String address) {
-        Address = address;
+        this.Address = address;
     }
     public void setSalary(Double salary) {
         this.salary = salary;
@@ -34,7 +34,7 @@ public class Customer {
     public Customer(int customerID, String customerName, String address, Double salary) {
         this.customerID = customerID;
         this.customerName = customerName;
-        Address = address;
+        this.Address = address;
         this.salary = salary;
     }
     

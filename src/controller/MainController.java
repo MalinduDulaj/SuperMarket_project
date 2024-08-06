@@ -6,7 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class MainController {
 
@@ -49,15 +51,28 @@ public class MainController {
 
     }
 
+    // @FXML
+    // void btnOrderOnAction(ActionEvent event) throws IOException {
+
+    //     System.out.println("Order Button Clicked");
+
+    //     this.root.getChildren().clear();
+    //     Parent node = FXMLLoader.load(this.getClass().getResource("/view/Order.fxml"));
+    //     this.root.getChildren().add(node);
+
+    // }
+
     @FXML
-    void btnOrderOnAction(ActionEvent event) throws IOException {
-
-        System.out.println("Order Button Clicked");
-
-        this.root.getChildren().clear();
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/Order.fxml"));
-        this.root.getChildren().add(node);
-
+    private void btnOrderOnAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Order.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
